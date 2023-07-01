@@ -1,7 +1,8 @@
 package com.sistema.encuestas.entity;
 
-import jakarta.persistence.*;
 import lombok.Data;
+
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
@@ -20,7 +21,7 @@ public class Survey {
 
     @ManyToOne
     @JoinColumn(name = "user_id_fk")
-    private User users;
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "brand_id_fk")

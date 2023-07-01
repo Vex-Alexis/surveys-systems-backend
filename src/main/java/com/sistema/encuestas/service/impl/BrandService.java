@@ -1,18 +1,17 @@
-package com.sistema.encuestas.service;
+package com.sistema.encuestas.service.impl;
 
 import com.sistema.encuestas.entity.Brand;
+import com.sistema.encuestas.entity.Survey;
 import com.sistema.encuestas.repository.BrandRepository;
+import com.sistema.encuestas.service.IBrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
-
 @Service
-public class BrandService {
+public class BrandService implements IBrandService {
 
     @Autowired
-    private BrandRepository marcaPCRepository;
+    private BrandRepository brandRepo;
 
 
 }
