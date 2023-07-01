@@ -20,8 +20,8 @@ public class Survey {
     private LocalDateTime date;
 
     @ManyToOne
-    @JoinColumn(name = "user_id_fk")
-    private User user;
+    @JoinColumn(name = "survey_user_id_fk")
+    private SurveyUser surveyUser;
 
     @ManyToOne
     @JoinColumn(name = "brand_id_fk")

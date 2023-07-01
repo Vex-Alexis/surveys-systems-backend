@@ -20,13 +20,13 @@ public class SurveyService implements ISurveyService {
     @Override
     public String saveNewSurvey(Survey surveyDTO) {
 
-        if (!userService.newUserIsValid(surveyDTO.getUser())){
+        if (!userService.newUserIsValid(surveyDTO.getSurveyUser())){
             //TODO: capturar respuesta de servicio para informar si se quedo por EMAIL o DNI
             return "el usuario ya respondio una encuesta anteriormente";
         }
 
         var saveSurveyReponse = surveyRepo.save(surveyDTO);
-        return String.format("Encuesta guardada correctamente, se envia copia al correo: %s", saveSurveyReponse.getUser().getEmail());
+        return String.format("Encuesta guardada correctamente, se envia copia al correo: %s", saveSurveyReponse.getSurveyUser().getEmail());
     }
 
 }
