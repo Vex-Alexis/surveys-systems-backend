@@ -1,15 +1,15 @@
 package com.sistema.encuestas.entity;
 
-import jakarta.persistence.*;
 import lombok.Data;
+
+import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "app_users")
+public class SurveyUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private Long id;
 
     @Column(name= "dni")
