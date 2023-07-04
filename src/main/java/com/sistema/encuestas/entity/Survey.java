@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 public class Survey {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_survey")
     private Long id;
 
     @Column(name = "comment", nullable = false)
@@ -20,11 +21,11 @@ public class Survey {
     private LocalDateTime date;
 
     @ManyToOne
-    @JoinColumn(name = "survey_user_id_fk")
+    @JoinColumn(name = "id_user")
     private SurveyUser surveyUser;
 
     @ManyToOne
-    @JoinColumn(name = "brand_id_fk")
+    @JoinColumn(name = "id_brand")
     private Brand brand;
 }
 

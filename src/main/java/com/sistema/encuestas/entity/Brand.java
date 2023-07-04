@@ -9,6 +9,7 @@ import lombok.Data;
 public class Brand {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_brand")
     private Long id;
 
     @Column(name= "brand_name", nullable = false)

@@ -10,6 +10,7 @@ import javax.persistence.*;
 public class SurveyUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_user")
     private Long id;
 
     @Column(name= "dni")
@@ -30,7 +31,7 @@ public class SurveyUser {
     @Column(name = "attempts")
     private int attempts;
 
-    @Column(name = "lock")
+    @Column(name = "lock_user")
     private boolean lock;
 }
 
